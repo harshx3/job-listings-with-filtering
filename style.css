@@ -1,0 +1,96 @@
+:root {
+    --Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+    --Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
+    --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+    --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+    --Desaturated-Dark-Cyan: hsl(180, 29%, 50%)
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Light-Grayish-Cyan-Background);
+}
+
+.top-background {
+    background-color: var(--Desaturated-Dark-Cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar {
+    width: 40%;
+    border: none;
+    position: absolute;
+    bottom: -10%;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+.job-listing-div {
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 1rem;
+    width: fit-content;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.job {
+    /* border: 2px solid rebeccapurple; */
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 2rem;
+    background-color: rgb(255, 255, 255);
+    padding: 0.8rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.company-logo-detail-div {
+    /* border: 2px solid; */
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.company-logo-div {}
+
+.company-detail-div {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.company-detail-div div {
+    display: flex;
+    gap: 1rem;
+}
+
+.company-detail-div>div>ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.company-skills-div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
