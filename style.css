@@ -11,7 +11,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: le;
 }
+
+/* Applying League Spartan with weight 500 */
+.league-spartan-500 {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+}
+
+/* Applying League Spartan with weight 700 (bold) */
+.league-spartan-700 {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
+
 
 body {
     background-color: var(--Light-Grayish-Cyan-Background);
@@ -25,6 +39,11 @@ body {
     position: relative;
 }
 
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+}
+
 .search-bar {
     width: 40%;
     border: none;
@@ -34,6 +53,7 @@ body {
     border-radius: 0.5rem;
     outline: none;
 }
+
 
 .job-listing-div {
     /* border: 2px solid; */
@@ -50,6 +70,8 @@ body {
     transform: translate(-50%);
 }
 
+
+
 .job {
     /* border: 2px solid rebeccapurple; */
     display: flex;
@@ -59,6 +81,66 @@ body {
     background-color: rgb(255, 255, 255);
     padding: 0.8rem 1.3rem;
     border-radius: 0.5rem;
+}
+
+.job:nth-child(1),
+.job:nth-child(2) {
+    border-left: 4px solid var(--Desaturated-Dark-Cyan);
+    border-radius: 0;
+}
+
+
+
+@media screen and (max-width:600px) {
+    .job-listing-div {
+        /* border: 2px solid rebeccapurple; */
+        gap: 3rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .job {
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1rem;
+        width: 80%;
+    }
+
+
+    .company-logo-detail-div {
+        /* border: 2px solid blue; */
+        flex-direction: column;
+        position: relative;
+        gap: 10rem;
+    }
+
+    .company-detail-div {
+        gap: 2rem;
+        /* border: 2px solid; */
+        width: 100%;
+    }
+
+    .company-logo-div img {
+        position: absolute;
+        left: 0;
+        top: -40%;
+        width: 20%;
+    }
+
+    .company-skills-div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        width: 60%;
+    }
+
+
 }
 
 .company-logo-detail-div {
@@ -79,9 +161,14 @@ body {
     gap: 0.5rem;
 }
 
+.company-name {
+    color: var(--Desaturated-Dark-Cyan);
+}
+
 .company-detail-div div {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .company-detail-div>div>ul {
@@ -93,4 +180,43 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.company-skills-div p {
+    background-color: var(--Light-Grayish-Cyan-Background);
+    color: var(--Desaturated-Dark-Cyan);
+    font-weight: 700;
+    padding: 0.2rem .5rem;
+    border-radius: 0.3rem;
+}
+
+.new-tag {
+    background-color: var(--Desaturated-Dark-Cyan);
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.3rem;
+    color: var(--Light-Grayish-Cyan-Filter-Tablets);
+}
+
+.featured-tag {
+    background-color: var(--Very-Dark-Grayish-Cyan);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.5rem;
+    color: var(--Light-Grayish-Cyan-Filter-Tablets);
+}
+
+footer {
+    background-color: var(--Desaturated-Dark-Cyan);
+    height: 50px;
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:600px) {
+    #header-img {
+        content: url("./images/bg-header-mobile.svg");
+        width: 100%;
+    }
 }
